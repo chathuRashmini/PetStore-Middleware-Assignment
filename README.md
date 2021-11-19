@@ -133,7 +133,7 @@ To test APIs you can use the **curl** which is a command-line tool for transferr
 ### GET API
 
 To get All the pets you can simply run the command,
->`curl -X GET http://local:8080/v1/pets`
+>`curl -X GET http://localhost:8080/v1/pets`
 
 The above command hits the given endpoint with a GET request and fetches all the available pets.
 `-X` is used to define the request's HTTP method. However, for a GET request you need not to mention it separately.
