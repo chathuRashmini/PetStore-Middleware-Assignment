@@ -133,27 +133,27 @@ To test APIs you can use the **curl** which is a command-line tool for transferr
 ### GET API
 
 To get All the pets you can simply run the command,
->`curl -X GET http://8080/v1/pets`
+>`curl -X GET http://local:8080/v1/pets`
 
 The above command hits the given endpoint with a GET request and fetches all the available pets.
 `-X` is used to define the request's HTTP method. However, for a GET request you need not to mention it separately.
 Which means the above line is as same as,
->`curl http://8080/v1/pets`
+>`curl http://local:8080/v1/pets`
 
 ### POST API
 To create a new pet you should use the method `-X POST`. However, just like in GET, defining POST is also not mandatory as it's different from GET. 
 Here as you need to send data you should use `-d` which is short for `--data`.
 Then you can send a JSON object by converting it into a string [JSON to String Online Converter](https://tools.knowledgewalls.com/json-to-string).
->`curl -d "{\"petId\":7,\"petAge\":2,\"petName\":\"Dinky\",\"petType\":\"Dog\"}" -H "Content-Type:application/json" http://8080/v1/pets/addPetObject`
+>`curl -d "{\"petId\":7,\"petAge\":2,\"petName\":\"Dinky\",\"petType\":\"Dog\"}" -H "Content-Type:application/json" http://local:8080/v1/pets/addPetObject`
 
 Here it has to be mentioned that data is passing in JSON format and for that `-H` has to be used.
 
 ### PUT API
 
 `-X PUT` is used for updating. This is a bit similar to above curl command.
->`curl -X PUT -d "{\"petId\":2,\"petAge\":5,\"petName\":\"Timmy\",\"petType\":\"Dog\"}" -H "Content-Type:application/json" http://8080/v1/pets/updatePet`
+>`curl -X PUT -d "{\"petId\":2,\"petAge\":5,\"petName\":\"Timmy\",\"petType\":\"Dog\"}" -H "Content-Type:application/json" http://local:8080/v1/pets/updatePet`
 
 ### DELETE API
 
 To test delete API you should use `-X DELETE` and pass the id of the particular pet.
->`curl -X DELETE http://8080/v1/pets/delete?petId=2`
+>`curl -X DELETE http://local:8080/v1/pets/delete?petId=2`
